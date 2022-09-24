@@ -10,6 +10,7 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <meta charset="utf-8">
   <title>Signup | Healthy Connections</title>
+  <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
 
@@ -88,8 +89,8 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 
 	<form action='' method='post'>
 
-		<p><label>Username</label><br />
-		<input type='text' name='username' placeholder="username" value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
+		<p><label>Username (Must be minimum 3 characters. Can include letters, numbers and underscores)</label><br />
+		<input type='text' name='username' placeholder="username" pattern="^[A-Za-z][A-Za-z0-9_]{2,29}$" value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
 
 		<p><label>Email</label><br />
 		<input type='email' name='email' placeholder="jane@doe.com" value='<?php if(isset($error)){ echo $_POST['email'];}?>'></p>
