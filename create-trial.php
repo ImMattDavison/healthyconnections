@@ -16,8 +16,9 @@
     };
 
 
-    $sdrn = random_int(100000, 999999);
-    $upid = $sdrn.'-'.time().'-'.$sdrn;
+    $sprn = random_int(100000, 999999);
+    $ssrn = random_int(100000, 999999);
+    $upid = $sprn.'-'.time().'-'.$ssrn;
 
     if(isset($_POST['submit'])) {
         $trialName = $_POST['trialName'].' | Medical Trial';
