@@ -22,8 +22,8 @@ class User extends Password{
 
 		try {
 
-			$stmt = $this->_db->prepare('SELECT memberID, username, password FROM site_users WHERE username = :username');
-			$stmt->execute(array('username' => $username));
+			$stmt = $this->_db->prepare('SELECT userid, username, password FROM site_users WHERE username = :username');
+			$stmt->execute(array(':username' => $username));
 
 			return $stmt->fetch();
 
@@ -37,10 +37,10 @@ class User extends Password{
 
 		$user = $this->get_user_hash($username);
 
-		if($this->password_verify($password,$user['password']) == 1){
+		if($this->password_verify($password,$user['password'])){
 
 		    $_SESSION['loggedin'] = true;
-		    $_SESSION['memberID'] = $user['memberID'];
+		    $_SESSION['userid'] = $user['userid'];
 		    $_SESSION['username'] = $user['username'];
 		    return true;
 		}
