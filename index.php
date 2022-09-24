@@ -34,7 +34,8 @@
                 <h1>Dashboard</h1>
                 <hr>
                 <?php echo "<h2>Welcome " . $userdata['firstName'] . ", it's the " .date('jS \of F Y'). "</h2>"; ?>
-                <?php if($userdata['isDoctor'] = 1) { ?>
+                <?php if($userdata['isDoctor'] = 1) {
+                    echo`
                     <div>
                         <h3>Doctor's Tools</h3>
                         <hr>
@@ -49,11 +50,11 @@
                                 <a class="tool-button" href="prescription.php">Alert a prescription as ready</a>
                             </div>
                         </div>
-                    </div>
-                <?php } ?>
+                    </div>`;
+                } ?>
 
                 <div>
-                    <h2>Medical Trials</h2>
+                    <h3>Medical Trials</h3>
                     <hr>
                     <div class="row">
                         <?php 
@@ -61,7 +62,8 @@
                             while($trials = mysqli_fetch_assoc($gettrials)) {
                                 echo "<div class='post-cell'>
                                         <div class='post-block'>
-                                            <h3>" . $trials['trialName'] . "</h3>
+                                            <small>Listing by: " .$trials['username']."</small>
+                                            <h4>" . $trials['trialName'] . "</h4>
                                             <p>" . $trials['trialDesc'] . "</p>
                                             <a class='post-button' href='trial.php?id=" . $trials['postid'] . "'>View Trial</a>
                                         </div>
@@ -79,6 +81,7 @@
                             while($trials = mysqli_fetch_assoc($gettrials)) {
                                 echo "<div class='post-cell'>
                                         <div class='post-block'>
+                                            <small> Listing by: " .$trials['username']."</small>
                                             <h3>" . $trials['trialName'] . "</h3>
                                             <p>" . $trials['trialDesc'] . "</p>
                                             <a class='post-button' href='trial.php?id=" . $trials['postid'] . "'>View Ad</a>
