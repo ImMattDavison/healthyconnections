@@ -70,6 +70,24 @@
                         ?>
                     </div>
                 </div>
+                <div>
+                    <h2>Job Ads</h2>
+                    <hr>
+                    <div class="row">
+                        <?php 
+                            $gettrials = mysqli_query($conn, 'SELECT * FROM posts WHERE postType = 2 ORDER BY id DESC LIMIT 3');
+                            while($trials = mysqli_fetch_assoc($gettrials)) {
+                                echo "<div class='post-cell'>
+                                        <div class='post-block'>
+                                            <h3>" . $trials['trialName'] . "</h3>
+                                            <p>" . $trials['trialDesc'] . "</p>
+                                            <a class='post-button' href='trial.php?id=" . $trials['postid'] . "'>View Post</a>
+                                        </div>
+                                    </div>";
+                            }
+                        ?>
+                    </div>
+                </div>
             </div>
         </body>
     <?php } ?>
