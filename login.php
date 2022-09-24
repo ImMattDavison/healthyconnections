@@ -11,16 +11,15 @@ if (isset($_SESSION['username'])) {
 }
 
 if (isset($_POST['submit'])) {
-	$username = $_POST['username'];
+	$email = $_POST['email'];
 	$password = md5($_POST['password']);
 
-	$sql = "SELECT * FROM site_users WHERE username='$username' AND password='$password'";
+	$sql = "SELECT * FROM site_users WHERE email='$email' AND password='$password'";
 	$result = mysqli_query($conn, $sql);
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['username'] = $row['username'];
-        $_SESSION['loggedin'] = true;
-		header("Location: index.php");
+		header("Location: welcome.php");
 	} else {
 		echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
 	}
@@ -48,7 +47,7 @@ if (isset($_POST['submit'])) {
         <h1 class="login-text">Login</h1>
 			<form action="" method="POST" class="login-email">
 				<div class="input-group">
-					<input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
+                    <input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
 				</div>
 				<div class="input-group">
 					<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
