@@ -1,0 +1,38 @@
+body{
+    background-color: #fff;
+}
+h1{
+    text-align: center;
+    margin-block: 1.2em .5em;
+}
+.form-item{
+    margin-block: 3em;
+}
+label{
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+}
+input{
+    padding: .75em;
+    font-size: 1.3em; 
+    border-radius: .5em;
+}
+textarea{
+    width: 100%;
+    border: 1px solid #000;
+    resize: vertical;
+    padding: .75em;
+    font-size: 1.1em;
+    font-family: 'Roboto', sans-serif;
+    border-radius: .5em;
+}
+.submit{
+    background-color: #ff5250;
+    color: #fff;
+    border: none;
+    padding: .75em 1.5em;
+    font-size: 1.3em;
+    border-radius: .5em;
+    cursor: pointer;
+}
