@@ -20,7 +20,7 @@
                         <a class="nav-link br" href="../">ABOUT</a>
                     </div>
                 </li>
-                <?php if(!$user->is_logged_in()){ ?>
+                <?php if(!isset($_SESSION['loggedin'])){ ?>
                     <div class="accounts-buttons">
                         <li class="nav-item br account-button-container">
                             <a class="nav-link br register-button" href="/signup.php">SIGN-UP</a>
@@ -29,7 +29,7 @@
                             <a class="nav-link br login-button" href="/login.php">LOGIN</a>
                         </li>
                     </div>
-                <?php }else if($user->is_logged_in()){?>
+                <?php }else if(isset($_SESSION['loggedin'])){?>
                     <li class="nav-item br sub-nav-parent">
                         <div class="sub-nav-closed-row">
                             <a class="nav-link br" href="../">ACCOUNT <b class="lg-dropper">&#9207;</b></a><button class="sub-nav-toggle">&#9207;</button>
