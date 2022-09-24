@@ -1,9 +1,8 @@
-<?php
-//include config
-require_once('includes/config.php');
+<?php 
 
-//log user out
-$user->logout();
-header('Location: index.php'); 
+session_start();
+session_destroy();
+
+header("Location: index.php");
 
 ?>
