@@ -22,7 +22,7 @@
 
     if(isset($_POST['submit'])) {
         $trialName = $_POST['trialName'].' | Medical Trial';
-        $trialDescription = $_POST['trialDesc'];
+        $trialDescription = htmlentities($_POST['trialDesc']);
         $trialPostDate = date('Y-m-d H:i:s');
         $username = $_SESSION['username'];
         $email = $userdata['email'];
