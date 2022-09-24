@@ -33,7 +33,7 @@
             <div class="container">
                 <h1>Dashboard</h1>
                 <hr>
-                <?php echo "<h2>Welcome " . $userdata['firstName'] . ", it's the " .date('jS \of F Y'). "</h2>"; ?>
+                <?php echo "<h2 class='welcome-address'>Welcome " . $userdata['firstName'] . ", it's the " .date('jS \of F Y'). "</h2>"; ?>
                     <div>
                         <h3 class="section-heading">Doctor's Tools</h3>
                         <hr>
