@@ -1,0 +1,36 @@
+h1{
+    margin-block: 1.2em .5em;
+}
+h2{
+    margin-block: .8em;
+}
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.tool-block{
+    display: flex;
+    width: 33.33%;
+    padding: .5em;
+    margin-block: 1em;
+}
+.tool-button{
+    color: #fff;
+    background-color: #ff5250;
+    padding: .5em 1em;
+    border-radius: .5em;
+    text-align: center;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .tool-block{
+        width: 100%;
+        padding: .5em;
+        margin-block: 0;
+        margin-top: .5em;
+    }
+    .tool-button{
+        width: 100%;
+    }
+}
