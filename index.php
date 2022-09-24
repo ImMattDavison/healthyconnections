@@ -34,8 +34,6 @@
                 <h1>Dashboard</h1>
                 <hr>
                 <?php echo "<h2>Welcome " . $userdata['firstName'] . ", it's the " .date('jS \of F Y'). "</h2>"; ?>
-                <?php // if(isset($_SESSION['username'])) { ?>
-                    echo`
                     <div>
                         <h3>Doctor's Tools</h3>
                         <hr>
@@ -50,9 +48,7 @@
                                 <a class="tool-button" href="prescription.php">Alert a prescription as ready</a>
                             </div>
                         </div>
-                    </div>`;
-                <!-- } ?> -->
-
+                    </div>
                 <div>
                     <h3>Medical Trials</h3>
                     <hr>
