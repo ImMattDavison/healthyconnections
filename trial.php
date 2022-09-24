@@ -7,20 +7,14 @@ if(!isset($_SESSION['username'])){
     exit();
 }
 $postid = $_GET['id'];
-$pgContent = 'SELECT * FROM posts WHERE id = 7';
+$pgContent = 'SELECT * FROM posts WHERE id = '.$postid.'';
 $gather = mysqli_query($conn, $pgContent);
 $gatheredContent = mysqli_fetch_assoc($gather);
 
-// echo $pgContent;
-
-// echo $gatheredContent;
-
-// echo $gather['postType'];
-
-// if($gatheredContent['postType'] = 2){
-//     header('Location: job.php?id='.$postid.'');
-// }
-// 
+if($gatheredContent['postType'] = 2){
+   header('Location: job.php?id='.$postid.'');
+}
+ 
 
 echo "<div class='post-cell'>
                                         <div class='post-block'>
