@@ -61,7 +61,7 @@
                                             <small class='listed-by'>Listing by: " .$trials['username']."</small>
                                             <h4>" . $trials['trialName'] . "</h4>
                                             <p>" . $trials['trialDesc'] . "</p>
-                                            <a class='post-button' href='trial.php?id=" . $trials['postid'] . "'>View Trial</a>
+                                            <a class='post-button' href='trial.php?" .$trials['postid']."&id=" . $trials['id'] . "'>View Trial</a>
                                         </div>
                                     </div>";
                             }
@@ -80,7 +80,7 @@
                                             <small class='listed-by'> Listing by: " .$trials['username']."</small>
                                             <h4>" . $trials['trialName'] . "</h4>
                                             <p>" . $trials['trialDesc'] . "</p>
-                                            <a class='post-button' href='job.php?id=" . $trials['postid'] . "'>View Ad</a>
+                                            <a class='post-button' href='job.php?" .$trials['postid']."&id=" . $trials['id'] . "'>View Ad</a>
                                         </div>
                                     </div>";
                             }
