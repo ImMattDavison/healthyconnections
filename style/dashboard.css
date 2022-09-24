@@ -60,6 +60,10 @@ h2{
     text-align: center;
     width: 100%;
 }
+.welcome-address{
+    margin-block: 1.2em;
+    font-size: 2em;
+}
 .section-heading{
     margin-top: 1em;
     font-size: 1.5em;
