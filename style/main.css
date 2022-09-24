@@ -166,7 +166,7 @@ div.sticky {
     background-color: #e4e4e4;
   }
   .sub-nav-item > a {
-    color: #000;
+    color: rgba(255, 255, 255, .5);
   }
 }
 .nav-link {
