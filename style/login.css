@@ -16,7 +16,7 @@ body{
 .form-body{
     padding: 2em;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     background-color: #fff;
@@ -36,4 +36,5 @@ input{
     background-color: #ff5250;
     border-radius: .25em;
     color: #fff;
+    align-self: center;
 }
