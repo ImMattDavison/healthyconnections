@@ -60,6 +60,11 @@ h2{
     text-align: center;
     width: 100%;
 }
+.section-heading{
+    margin-top: 1em;
+    font-size: 1.5em;
+    font-weight: 600;
+}
 @media (max-width: 768px) {
     .tool-block{
         width: 100%;
