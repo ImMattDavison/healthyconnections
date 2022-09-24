@@ -12,8 +12,8 @@ if($user->is_logged_in() ){ header('Location: index.php'); }
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Login | HealthyConnections</title>
-  <link rel="stylesheet" href="../style/main.css">
-  <link rel="stylesheet" href="../style/login.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
 
