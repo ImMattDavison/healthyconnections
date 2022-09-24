@@ -18,7 +18,7 @@
                 <?php if(!isset($_SESSION['username'])){ ?>
                     <div class="accounts-buttons">
                         <li class="nav-item br account-button-container">
-                            <a class="nav-link br register-button" href="/signup.php">SIGN-UP</a>
+                            <a class="nav-link br register-button" href="signup.php">SIGN-UP</a>
                         </li>
                         <li class="nav-item br account-button-container">
                             <a class="nav-link br login-button" href="/login.php">LOGIN</a>
