@@ -15,6 +15,14 @@ h2{
     padding: .5em;
     margin-block: 1em;
 }
+.post-cell{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 33.33%;
+    padding: .5em;
+    margin-block: 1em;
+}
 .tool-button{
     color: #fff;
     background-color: #ff5250;
@@ -32,5 +40,11 @@ h2{
     }
     .tool-button{
         width: 100%;
+    }
+    .post-cell{
+        width: 100%;
+        padding: .5em;
+        margin-block: 0;
+        margin-top: .5em;
     }
 }
