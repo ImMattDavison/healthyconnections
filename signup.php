@@ -2,7 +2,7 @@
 require_once('includes/config.php');
 
 //if not logged in redirect to login page
-if(!$user->is_logged_in()){ header('Location: index.php'); }
+if($user->is_logged_in()){ header('Location: index.php'); }
 ?>
 <!doctype html>
 <html lang="en">
@@ -44,12 +44,12 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 			$error[] = 'Please enter a username.';
 		}
 
-		// $usernameCheck = $db->prepare('SELECT username FROM site_users WHERE username = :username');
-		// $usernameCheck->execute(array(':username' => $username));
-		// $result = $usernameCheck->fetch();
-		// if($result['username'] == ''){
-		// 	$error[] = 'Username already exists.';
-		// }
+		$usernameCheck = $db->prepare('SELECT username FROM site_users WHERE username = :username');
+		$usernameCheck->execute(array(':username' => $username));
+		$result = $usernameCheck->fetch();
+		if(!$result['username'] == ''){
+			$error[] = 'Username already exists.';
+		}
 
 		if($password ==''){
 			$error[] = 'Please enter the password.';
@@ -67,23 +67,23 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 			$error[] = 'Please enter your email address.';
 		}
 
-		// $emailCheck = $db->prepare('SELECT username FROM site_users WHERE email = :email');
-		// $emailCheck->execute(array(':email' => $email));
-		// $result = $emailCheck->fetch();
-		// if($result['email'] == ''){
-		// 	$error[] = 'Email already registered.';
-		// }
+		$emailCheck = $db->prepare('SELECT username FROM site_users WHERE email = :email');
+		$emailCheck->execute(array(':email' => $email));
+		$eresult = $emailCheck->fetch();
+		if(!$eresult['email'] == ''){
+		 	$error[] = 'Email already registered.';
+		}
 
 		if($phoneNumber ==''){
 			$error[] = 'Please enter your phone number.';
 		}
 
-		// $phoneCheck = $db->prepare('SELECT username FROM site_users WHERE phoneNumber = :phoneNumber');
-		// $phoneCheck->execute(array(':phoneNumber' => $phoneNumber));
-		// $result = $phoneCheck->fetch();
-		// if($result['phoneNumber'] == ''){
-		// 	$error[] = 'Phone Number already registered.';
-		// }
+		$phoneCheck = $db->prepare('SELECT username FROM site_users WHERE phoneNumber = :phoneNumber');
+		$phoneCheck->execute(array(':phoneNumber' => $phoneNumber));
+		$presult = $phoneCheck->fetch();
+		if(!$presult['phoneNumber'] == ''){
+		 	$error[] = 'Phone Number already registered.';
+		}
 
 		if(!isset($error)){
 
@@ -102,8 +102,8 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 					':phoneNumber' => $phoneNumber,
 				));
 
-				//redirect to index page
-				header('Location: index.php');
+				//redirect to login page
+				header('Location: login.php');
 				exit;
 
 			} catch(PDOException $e) {
