@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-sm">
         <div class="container flex nav-container external-nav-container">
             <div class="flex nav-container small-nav-container">
-                <a class="navbar-brand align-items-center" href="../">
+                <a class="navbar-brand align-items-center" href="index.php">
                     <img src="assets/logo.svg" alt="logo - HealthyConnections" height="55px">
                 </a>
                 <button class="navbar-toggle" type="button">
@@ -13,12 +13,7 @@
             </div>
             <ul class="navbar-nav flex nav-sm">
                 <li class="nav-item br">
-                    <a class="nav-link br" href="../">HOME</a>
-                </li>
-                <li class="nav-item br sub-nav-parent">
-                    <div class="sub-nav-closed-row">
-                        <a class="nav-link br" href="../">ABOUT</a>
-                    </div>
+                    <a class="nav-link br" href="index.php">HOME</a>
                 </li>
                 <?php if(!isset($_SESSION['username'])){ ?>
                     <div class="accounts-buttons">
