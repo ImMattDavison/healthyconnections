@@ -59,6 +59,7 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 		if(!isset($error)){
 
 			$hashedpassword = password_hash($password, PASSWORD_BCRYPT);
+			$loginTime = time();
 
 			try {
 
@@ -69,7 +70,7 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 					':username' => $username,
 					':password' => $hashedpassword,
 					':email' => $email,
-					':phoneNumber' => $phoneNumber
+					':phoneNumber' => $phoneNumber,
 				));
 
 				//redirect to index page
@@ -93,6 +94,11 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 	?>
 
 	<form action='' method='post'>
+		<p><label>First Name</label><br />
+		<input type='text' name='firstName' placeholder="Jane" value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
+		
+		<p><label>Last Name</label><br />
+		<input type='text' name='lastName' placeholder="Doe" value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
 
 		<p><label>Username (Must be minimum 3 characters. Can include letters, numbers and underscores)</label><br />
 		<input type='text' name='username' placeholder="username" pattern="^[A-Za-z][A-Za-z0-9_]{2,29}$" value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
