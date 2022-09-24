@@ -28,10 +28,10 @@
                 <?php if(!isset($_SESSION["loggedin"])): ?>
                     <div class="accounts-buttons">
                         <li class="nav-item br account-button-container">
-                            <a class="nav-link br register-button" href="../register.php">SIGN-UP</a>
+                            <a class="nav-link br register-button" href="/signup.php">SIGN-UP</a>
                         </li>
                         <li class="nav-item br account-button-container">
-                            <a class="nav-link br login-button" href="../login.php">LOGIN</a>
+                            <a class="nav-link br login-button" href="/login.php">LOGIN</a>
                         </li>
                     </div>
                 <?php else: if(isset($_SESSION["loggedin"])): ?>
