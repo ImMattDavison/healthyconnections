@@ -43,7 +43,7 @@
                                 <a class="tool-button" href="create-trial.php">Create an ad for a Medical Trial</a>
                             </div>
                             <div class="tool-block">
-                                <a class="tool-button" href="create-ad.php">Create a job ad for a Doctor</a>
+                                <a class="tool-button" href="create-job.php">Create a job ad for a Doctor</a>
                             </div>
                             <div class="tool-block">
                                 <a class="tool-button" href="prescription.php">Alert a prescription as ready</a>
