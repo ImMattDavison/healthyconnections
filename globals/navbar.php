@@ -32,7 +32,7 @@
                 <?php }else if(isset($_SESSION['username'])){?>
                     <li class="nav-item br sub-nav-parent">
                         <div class="sub-nav-closed-row">
-                            <a class="nav-link br" href="../">ACCOUNT <b class="lg-dropper">&#9207;</b></a><button class="sub-nav-toggle">&#9207;</button>
+                            <a class="nav-link br">ACCOUNT <b class="lg-dropper">&#9207;</b></a><button class="sub-nav-toggle">&#9207;</button>
                         </div>
                         <ul class="sub-nav">
                             <li class="sub-nav-item"><a href="logout.php">Logout</a></li>
