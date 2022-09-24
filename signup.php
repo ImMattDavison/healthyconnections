@@ -16,7 +16,7 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 <div class="container">
 
 
-	<h2>Signup</h2>
+	<h1>Signup</h1>
 
 	<?php
 
@@ -54,11 +54,12 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 			try {
 
 				//insert into database
-				$stmt = $db->prepare('INSERT INTO site_users (username,password,email) VALUES (:username, :password, :email)') ;
+				$stmt = $db->prepare('INSERT INTO site_users (username,password,email,phoneNumber) VALUES (:username, :password, :email, :phoneNumber)') ;
 				$stmt->execute(array(
 					':username' => $username,
 					':password' => $hashedpassword,
-					':email' => $email
+					':email' => $email,
+					':phoneNumber' => $phoneNumber
 				));
 
 				//redirect to index page
@@ -87,7 +88,10 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 		<input type='text' name='username' value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
 
 		<p><label>Email</label><br />
-		<input type='text' name='email' value='<?php if(isset($error)){ echo $_POST['email'];}?>'></p>
+		<input type='email' name='email' value='<?php if(isset($error)){ echo $_POST['email'];}?>'></p>
+
+		<p><label>Phone Number</label><br />
+		<input type='tel' name='email' value='<?php if(isset($error)){ echo $_POST['phoneNumber'];}?>'></p>
 
 		<p><label>Password</label><br />
 		<input type='password' name='password' value='<?php if(isset($error)){ echo $_POST['password'];}?>'></p>
