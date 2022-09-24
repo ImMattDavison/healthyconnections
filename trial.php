@@ -7,10 +7,26 @@ if(!isset($_SESSION['username'])){
     exit();
 }
 $postid = $_GET['id'];
-$pgContent = mysqli_query($conn, 'SELECT * FROM posts WHERE postid = $postid');
-$gatheredContent = mysqli_fetch_assoc($pgContent);
+$pgContent = 'SELECT * FROM posts WHERE id = 7';
+$gather = mysqli_query($conn, $pgContent);
+$gatheredContent = mysqli_fetch_assoc($gather);
 
-if($gatheredContent['postid'] = 2){
-    header('Location: job.php?id='.$postid);');
-}
+// echo $pgContent;
 
+// echo $gatheredContent;
+
+// echo $gather['postType'];
+
+// if($gatheredContent['postType'] = 2){
+//     header('Location: job.php?id='.$postid.'');
+// }
+// 
+
+echo "<div class='post-cell'>
+                                        <div class='post-block'>
+                                            <small class='listed-by'> Listing by: " .$gatheredContent['username']."</small>
+                                            <h4>" . $gatheredContent['trialName'] . "</h4>
+                                            <p>" . $gatheredContent['trialDesc'] . "</p>
+                                            <a class='post-button' href='job.php?id=" . $gatheredContent['postid'] . "'>View Ad</a>
+                                        </div>
+                                    </div>";
