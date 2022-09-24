@@ -2,10 +2,10 @@
 <html lang="en">
     <?php
     error_reporting(0);
-    session_start();
     require_once('includes/config.php');
-
-    if(isset($_SESSION['loggedin'])){?>
+    session_start();
+    echo $_SESSION['username'];
+    if(isset($_SESSION['username'])){?>
         <!-- IF LOGGED IN THIS WILL SHOW -->
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
             <?php include('globals/navbar.php') ?>
             <h1>Dashboard</h1>
         </body>
-    <?php } else if(!isset($_SESSION['loggedin'])) { ?>
+    <?php } else if(!isset($_SESSION['username'])) { ?>
         <!-- IF NOT LOGGED IN THIS WILL SHOW -->
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
