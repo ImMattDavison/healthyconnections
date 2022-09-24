@@ -18,8 +18,8 @@ if (isset($_POST['submit'])) {
 	$result = mysqli_query($conn, $sql);
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
-        $_SESSION['loggedin'] = true;
 		$_SESSION['username'] = $row['username'];
+        $_SESSION['loggedin'] = true;
 		header("Location: index.php");
 	} else {
 		echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
