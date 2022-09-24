@@ -29,10 +29,11 @@ input{
 }
 .login{
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 1em;
     border: none;
     background-color: #ff5250;
     border-radius: .25em;
+    color: #fff;
 }
