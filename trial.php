@@ -12,7 +12,7 @@ $gather = mysqli_query($conn, $pgContent);
 $gatheredContent = mysqli_fetch_assoc($gather);
 
 if($gatheredContent['postType'] = 2){
-   header('Location: job.php?id='.$postid.'');
+   header('Location: job.php?'.$gatheredContent['postid'].'id='.$postid.'');
 }
  
 
