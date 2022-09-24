@@ -14,6 +14,7 @@ body{
     align-items: center;
 }
 .form-body{
+    min-width: 350px;
     padding: 2em;
     display: flex;
     flex-flow: column wrap;
@@ -26,6 +27,8 @@ body{
 input{
     border: none;
     border-bottom: 1px solid #000;
+    width: 100%;
+    padding-block: .5em;
 }
 .login{
     text-align: center;
@@ -37,4 +40,5 @@ input{
     border-radius: .25em;
     color: #fff;
     align-self: center;
+    padding: .5em;
 }
