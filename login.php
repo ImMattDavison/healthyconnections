@@ -45,8 +45,8 @@ if($user->is_logged_in() ){ header('Location: index.php'); }
 	<div class="form-body"> 
 		<h1>Login</h1>
 		<form action="" method="post">
-			<p><label>Username</label><br><input type="text" name="username" value=""  /></p>
-			<p><label>Password</label><br><input type="password" name="password" value=""  /></p>
+			<p><label>Username</label><br><input required type="text" name="username" value=""  /></p>
+			<p><label>Password</label><br><input required type="password" name="password" value=""  /></p>
 			<label></label><input class="login" type="submit" name="submit" value="Login"/>
 		</form>
 	</div>
