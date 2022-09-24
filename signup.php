@@ -144,7 +144,7 @@ if($user->is_logged_in()){ header('Location: index.php'); }
 		<p><label>Confirm Password</label><br />
 		<input type='password' name='passwordConfirm' placeholder="password" value='<?php if(isset($error)){ echo $_POST['passwordConfirm'];}?>'></p>
 		
-		<p><input class="submit" type='submit' name='submit' value='Sign Up'></p>
+		<p><input class="login" type='submit' name='submit' value='Sign Up'></p>
 
 	</form>
 	</div>	
