@@ -16,7 +16,10 @@
             <?php include('globals/navbar.php') ?>
             
         </body>
-    <?php } else if(isset($_SESSION['username'])) { ?>
+    <?php } else if(isset($_SESSION['username'])) {
+                    $getuser = mysqli_query($conn, "SELECT * FROM site_users WHERE username='".$_SESSION['username']."'");
+                    $userdata = mysqli_fetch_assoc($getuser);
+        ?>
         <!-- IF NOT LOGGED IN THIS WILL SHOW -->
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +30,11 @@
         </head>
         <body>
             <?php include('globals/navbar.php') ?>
-            <h1>Dashboard</h1>
+            <div class="container">
+                <h1>Dashboard</h1>
+                <?php echo "<h1>Welcome " . $userdata['firstName'] . "</h1>"; ?>
+                <a href="logout.php">Logout</a>
+            </div>
         </body>
     <?php } ?>
 </html>
