@@ -221,20 +221,28 @@ body {
   .login-button{
     padding: .65em .65em;
     border-radius: .6em;
-    background-color: #fff;
-    color: #ff5250;
+    background-color: transparent;
+    color: #fff;
     margin-left: .3em;
+    border: #fff solid 2px;
   
   }
   .login-button > a{
     color: #fff;
   }
   .register-button{
+    transition: all .2s ease-in-out;
     padding: .65em .65em;
     border-radius: .6em;
     background-color: #fff;
     color: #ff5250;
     margin-inline: .3em;
+    border: #ff5250 solid 2px;
+  }
+  .register-button:hover{
+    transition: all .2s ease-in-out;
+    background-color: #FFF;
+    color: #ff5250;
   }
   .register-button > a{
     color: #fff;
