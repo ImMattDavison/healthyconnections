@@ -8,5 +8,9 @@ if(!isset($_SESSION['username'])){
 }
 $postid = $_GET['id'];
 $pgContent = mysqli_query($conn, 'SELECT * FROM posts WHERE postid = $postid');
+$gatheredContent = mysqli_fetch_assoc($pgContent);
 
+if($gatheredContent['postid'] = 2){
+    header('Location: trial.php?id='.$postid);');
+}
 
