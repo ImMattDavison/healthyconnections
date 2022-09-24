@@ -55,7 +55,7 @@
                 <p class="form-item"><label>Job Description</label><br />
 		        <textarea required name='trialDesc' cols='60' rows='10'><?php if(isset($error)){ echo $_POST['postCont'];}?></textarea></p>
 
-                <p><input class="submit" type='submit' name='submit' value='Post Medical Trial Ad'></p>
+                <p><input class="submit" type='submit' name='submit' value='Post Job Ad'></p>
             </form>
         </div>
     </body>
