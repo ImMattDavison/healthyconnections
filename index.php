@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 <div>
-                    <h3>Medical Trials</h3>
+                    <h3 class="section-heading">Medical Trials</h3>
                     <hr>
                     <div class="row">
                         <?php 
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3>Job Ads</h3>
+                    <h3 class="section-heading">Job Ads</h3>
                     <hr>
                     <div class="row">
                         <?php 
