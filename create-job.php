@@ -21,7 +21,7 @@
     $upid = $sprn.'-'.time().'-'.$ssrn;
 
     if(isset($_POST['submit'])) {
-        $trialName = $_POST['trialName'].' | Medical Trial';
+        $trialName = $_POST['trialName'].' | Job Opening';
         $trialDescription = htmlentities($_POST['trialDesc']);
         $trialPostDate = date('Y-m-d H:i:s');
         $username = $_SESSION['username'];
