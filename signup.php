@@ -121,7 +121,7 @@ if($user->is_logged_in()){ header('Location: index.php'); }
 		}
 	}
 	?>
-
+	<div class="form-body">
 	<form action='' method='post'>
 		<p><label>First Name</label><br />
 		<input type='text' name='firstName' placeholder="Jane" value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
@@ -147,6 +147,7 @@ if($user->is_logged_in()){ header('Location: index.php'); }
 		<p><input class="submit" type='submit' name='submit' value='Sign Up'></p>
 
 	</form>
+	</div>	
 
 </div>
 </body>
