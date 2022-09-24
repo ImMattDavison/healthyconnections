@@ -40,6 +40,18 @@ h2{
     margin-bottom: 1em;
     font-size: 1.1em;
 }
+.post-block > p{
+    margin-bottom: 1em;
+    font-size: 1.05em;
+}
+.post-block > a{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #ff5250;
+    padding: .5em 1em;
+    border-radius: .5em;
+}
 .tool-button{
     color: #fff;
     background-color: #ff5250;
