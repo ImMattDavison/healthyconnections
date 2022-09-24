@@ -18,9 +18,6 @@
                         <a class="nav-link br" href="../">ABOUT</a>
                     </div>
                 </li>
-                <li class="nav-item br">
-                    <a class="nav-link br" href="../">CONTACT</a>
-                </li>
                 <?php if(!isset($_SESSION["loggedin"])): ?>
                     <div class="accounts-buttons">
                         <li class="nav-item br account-button-container">
