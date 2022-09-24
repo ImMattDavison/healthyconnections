@@ -17,10 +17,11 @@ input{
     padding: .75em;
     font-size: 1.3em; 
     border-radius: .5em;
+    border: 2px solid #000;
 }
 textarea{
     width: 100%;
-    border: 1px solid #000;
+    border: 2px solid #000;
     resize: vertical;
     padding: .75em;
     font-size: 1.1em;
