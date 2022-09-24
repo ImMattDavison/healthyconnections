@@ -34,7 +34,7 @@
                 <h1>Dashboard</h1>
                 <hr>
                 <?php echo "<h2>Welcome " . $userdata['firstName'] . ", it's the " .date('jS \of F Y'). "</h2>"; ?>
-                <?php if($userdata['isDoctor'] = 1) {
+                <?php // if(isset($_SESSION['username'])) { ?>
                     echo`
                     <div>
                         <h3>Doctor's Tools</h3>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>`;
-                } ?>
+                <!-- } ?> -->
 
                 <div>
                     <h3>Medical Trials</h3>
@@ -62,7 +62,7 @@
                             while($trials = mysqli_fetch_assoc($gettrials)) {
                                 echo "<div class='post-cell'>
                                         <div class='post-block'>
-                                            <small>Listing by: " .$trials['username']."</small>
+                                            <small class='listed-by'>Listing by: " .$trials['username']."</small>
                                             <h4>" . $trials['trialName'] . "</h4>
                                             <p>" . $trials['trialDesc'] . "</p>
                                             <a class='post-button' href='trial.php?id=" . $trials['postid'] . "'>View Trial</a>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div>
-                    <h2>Job Ads</h2>
+                    <h3>Job Ads</h3>
                     <hr>
                     <div class="row">
                         <?php 
@@ -81,8 +81,8 @@
                             while($trials = mysqli_fetch_assoc($gettrials)) {
                                 echo "<div class='post-cell'>
                                         <div class='post-block'>
-                                            <small> Listing by: " .$trials['username']."</small>
-                                            <h3>" . $trials['trialName'] . "</h3>
+                                            <small class='listed-by'> Listing by: " .$trials['username']."</small>
+                                            <h4>" . $trials['trialName'] . "</h4>
                                             <p>" . $trials['trialDesc'] . "</p>
                                             <a class='post-button' href='trial.php?id=" . $trials['postid'] . "'>View Ad</a>
                                         </div>
