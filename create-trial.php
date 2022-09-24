@@ -14,14 +14,21 @@
 
 
     $sdrn = random_int(100000, 999999);
-    $uid = $sdrn.time().$sdrn;
+    $upid = $sdrn.'-'.time().'-'.$sdrn;
 
     if(isset($_POST['submit'])) {
         $trialName = $_POST['trialName'];
         $trialDescription = $_POST['trialDescription'];
         $username = $_SESSION['username'];
-        $email = $_POST['email'];
+        $email = $userdata['email'];
+        $phoneNumber = $userdata['phoneNumber'];
+        $sql = "INSERT INTO posts (postid, trialName, trialDesc, username, email, phoneNumber, postType) VALUES ('$upid','$trialName', '$trialDescription', '$username', '$email', '$phoneNumber', 3)";
+				$result = mysqli_query($conn, $sql);
+				if ($result) {
+					echo '<script>alert("Your trial ad has been created successfully.")</script>';
+				}
     }
     ?>
+
 
 <!DOCTYPE html>
