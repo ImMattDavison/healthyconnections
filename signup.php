@@ -44,7 +44,11 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 		}
 
 		if($email ==''){
-			$error[] = 'Please enter the email address.';
+			$error[] = 'Please enter your email address.';
+		}
+
+		if($phoneNumber ==''){
+			$error[] = 'Please enter your phone number.';
 		}
 
 		if(!isset($error)){
@@ -85,19 +89,19 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 	<form action='' method='post'>
 
 		<p><label>Username</label><br />
-		<input type='text' name='username' value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
+		<input type='text' name='username' placeholder="username" value='<?php if(isset($error)){ echo $_POST['username'];}?>'></p>
 
 		<p><label>Email</label><br />
-		<input type='email' name='email' value='<?php if(isset($error)){ echo $_POST['email'];}?>'></p>
+		<input type='email' name='email' placeholder="jane@doe.com" value='<?php if(isset($error)){ echo $_POST['email'];}?>'></p>
 
 		<p><label>Phone Number</label><br />
-		<input type='tel' name='email' value='<?php if(isset($error)){ echo $_POST['phoneNumber'];}?>'></p>
+		<input type='tel' name='phoneNumber' placeholder="+44 7123456789" value='<?php if(isset($error)){ echo $_POST['phoneNumber'];}?>'></p>
 
 		<p><label>Password</label><br />
-		<input type='password' name='password' value='<?php if(isset($error)){ echo $_POST['password'];}?>'></p>
+		<input type='password' name='password' placeholder="password" value='<?php if(isset($error)){ echo $_POST['password'];}?>'></p>
 
 		<p><label>Confirm Password</label><br />
-		<input type='password' name='passwordConfirm' value='<?php if(isset($error)){ echo $_POST['passwordConfirm'];}?>'></p>
+		<input type='password' name='passwordConfirm' placeholder="password" value='<?php if(isset($error)){ echo $_POST['passwordConfirm'];}?>'></p>
 		
 		<p><input class="submit" type='submit' name='submit' value='Sign Up'></p>
 
