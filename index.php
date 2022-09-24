@@ -32,8 +32,26 @@
             <?php include('globals/navbar.php') ?>
             <div class="container">
                 <h1>Dashboard</h1>
-                <?php echo "<h1>Welcome " . $userdata['firstName'] . "</h1>"; ?>
-                <a href="logout.php">Logout</a>
+                <hr>
+                <?php echo "<h2>Welcome " . $userdata['firstName'] . ", it's the " .date('jS \of F Y'). "</h2>"; ?>
+                <?php if($userdata['isDoctor'] = 1) { ?>
+                    <div>
+                        <h3>Doctor's Tools</h3>
+                        <hr>
+                        <div class="row">
+                            <div class="tool-block">
+                                <a class="tool-button" href="create-trial.php">Create an ad for a Medical Trial</a>
+                            </div>
+                            <div class="tool-block">
+                                <a class="tool-button" href="create-ad.php">Create a job ad for a Doctor</a>
+                            </div>
+                            <div class="tool-block">
+                                <a class="tool-button" href="prescription.php">Alert a prescription as ready</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <div>
             </div>
         </body>
     <?php } ?>
