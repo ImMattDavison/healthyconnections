@@ -1,9 +1,11 @@
+<?php require_once('includes/config.php'); ?>
+
 <div class="sticky">
     <nav class="navbar navbar-expand-sm">
         <div class="container flex nav-container external-nav-container">
             <div class="flex nav-container small-nav-container">
                 <a class="navbar-brand align-items-center" href="../">
-                    <img src="./assets/branding/wordmark.svg" alt="logo - HealthyConnections" height="55px">
+                    <img src="assets/logo.svg" alt="logo - HealthyConnections" height="55px">
                 </a>
                 <button class="navbar-toggle" type="button">
                     &#9776;
@@ -18,7 +20,7 @@
                         <a class="nav-link br" href="../">ABOUT</a>
                     </div>
                 </li>
-                <?php if(!isset($_SESSION["loggedin"])): ?>
+                <?php if(!$user->is_logged_in()){ ?>
                     <div class="accounts-buttons">
                         <li class="nav-item br account-button-container">
                             <a class="nav-link br register-button" href="/signup.php">SIGN-UP</a>
@@ -27,13 +29,13 @@
                             <a class="nav-link br login-button" href="/login.php">LOGIN</a>
                         </li>
                     </div>
-                <?php else: if(isset($_SESSION["loggedin"])): ?>
+                <?php }else if($user->is_logged_in()){?>
                     <li class="nav-item br sub-nav-parent">
                         <div class="sub-nav-closed-row">
                             <a class="nav-link br" href="../">ACCOUNT <b class="lg-dropper">&#9207;</b></a><button class="sub-nav-toggle">&#9207;</button>
                         </div>
                     </li>
-                <?php endif; endif; ?>
+                <?php };?>
             </ul>
     </nav>
         </div>
