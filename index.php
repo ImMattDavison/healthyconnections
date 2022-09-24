@@ -81,7 +81,7 @@
                                         <div class='post-block'>
                                             <h3>" . $trials['trialName'] . "</h3>
                                             <p>" . $trials['trialDesc'] . "</p>
-                                            <a class='post-button' href='trial.php?id=" . $trials['postid'] . "'>View Post</a>
+                                            <a class='post-button' href='trial.php?id=" . $trials['postid'] . "'>View Ad</a>
                                         </div>
                                     </div>";
                             }
