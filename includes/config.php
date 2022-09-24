@@ -1,44 +1,17 @@
-<?php
-ob_start();
-session_start();
+<?php 
 
-//database credentials
-define('DBHOST','localhost');
-define('DBUSER','root');
-define('DBPASS','');
-define('DBNAME','healthyconnections');
+$server = "localhost";
+$user = "root";
+$pass = "";
+$database = "healthyconnections";
 
-$db = new PDO("mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS);
-$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$conn = mysqli_connect($server, $user, $pass, $database);
 
+if (!$conn) {
+    die("<script>alert('Connection Failed.')</script>");
+}
 
-//set timezone
-date_default_timezone_set('Europe/London');
+// require_once('class.user.php');
+// require_once('class.password.php');
 
-//load classes as needed
-spl_autoload_register(function ($class) {
-   
-   $class = strtolower($class);
-
-    //if call from within assets adjust the path
-   $classpath = 'classes/class.'.$class . '.php';
-   if ( file_exists($classpath)) {
-      require_once $classpath;
-    }     
-    
-    //if call from within admin adjust the path
-   $classpath = '../classes/class.'.$class . '.php';
-   if ( file_exists($classpath)) {
-      require_once $classpath;
-    }
-    
-    //if call from within admin adjust the path
-   $classpath = '../../classes/class.'.$class . '.php';
-   if ( file_exists($classpath)) {
-      require_once $classpath;
-    }         
-     
-});
-
-$user = new User($db); 
 ?>
