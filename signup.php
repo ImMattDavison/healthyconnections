@@ -10,6 +10,7 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <meta charset="utf-8">
   <title>Signup | Healthy Connections</title>
+  <link rel="stylesheet" href="style/main.css">
   <link rel="stylesheet" href="style/login.css">
 </head>
 <body>
@@ -26,6 +27,9 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 
 		//collect form data
 		extract($_POST);
+
+		$sdrn = random_int(100000, 999999);
+		$uid = time().$sdrn;
 
 		//very basic validation
 		if($username ==''){
@@ -59,8 +63,9 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 			try {
 
 				//insert into database
-				$stmt = $db->prepare('INSERT INTO site_users (username,password,email,phoneNumber) VALUES (:username, :password, :email, :phoneNumber)') ;
-				$stmt->execute(array(
+				$stmt = $db->prepare('INSERT INTO site_users (userid,username,password,email,phoneNumber) VALUES (:userid, :username, :password, :email, :phoneNumber)') ;
+				$stmt->execute(array(#
+					':userid' => $uid,
 					':username' => $username,
 					':password' => $hashedpassword,
 					':email' => $email,
