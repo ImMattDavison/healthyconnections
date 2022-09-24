@@ -2,7 +2,7 @@
 require_once('includes/config.php');
 
 //if not logged in redirect to login page
-if(!$user->is_logged_in()){ header('Location: login.php'); }
+if(!$user->is_logged_in()){ header('Location: index.php'); }
 ?>
 <!doctype html>
 <html lang="en">
@@ -10,6 +10,11 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <meta charset="utf-8">
   <title>Signup | Healthy Connections</title>
+  <link
+     rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+   />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 </head>
 <body>
 
@@ -67,7 +72,7 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 				));
 
 				//redirect to index page
-				header('Location: users.php?action=added');
+				header('Location: index.php');
 				exit;
 
 			} catch(PDOException $e) {
@@ -95,7 +100,7 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 		<input type='email' name='email' placeholder="jane@doe.com" value='<?php if(isset($error)){ echo $_POST['email'];}?>'></p>
 
 		<p><label>Phone Number</label><br />
-		<input type='tel' name='phoneNumber' placeholder="+44 7123456789" value='<?php if(isset($error)){ echo $_POST['phoneNumber'];}?>'></p>
+		<input id="phone" type='tel' name='phoneNumber' placeholder="+447123456789" pattern="^\+[1-9]\d{1,14}$" value='<?php if(isset($error)){ echo $_POST['phoneNumber'];}?>'></p>
 
 		<p><label>Password</label><br />
 		<input type='password' name='password' placeholder="password" value='<?php if(isset($error)){ echo $_POST['password'];}?>'></p>
@@ -109,3 +114,4 @@ if(!$user->is_logged_in()){ header('Location: login.php'); }
 
 </div>
 </body>
+ </html>
