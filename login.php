@@ -15,9 +15,9 @@ if($user->is_logged_in() ){ header('Location: index.php'); }
   <link rel="stylesheet" href="../style/main.css">
   <link rel="stylesheet" href="../style/login.css">
 </head>
-<body style="background: linear-gradient(0deg, rgba(247,170,170,1) 0%, rgba(255,82,80,1) 35%); background-size: cover; background-position: bottom; backdrop-filter: blur(5px);">
+<body>
 
-<div style="display: flex; flex-flow: column; height: 100vh; width: 100vw; justify-content: center; align-items: center; backdrop-filter: blur(5px)" class="container">
+<div class="container">
 
 	<?php
 
@@ -42,12 +42,12 @@ if($user->is_logged_in() ){ header('Location: index.php'); }
 
 	if(isset($message)){ echo $message; }
 	?>
-	<div style="padding: 3em 5em; border-radius: 1em; background-color: #fff; backdrop-filter: blur(10px); min-width: 50vw;"> 
-		<h1 style="text-align: center; margin-top: 0; margin-bottom: .75em; font-size: 1.75em;">Login</h1>
-		<form style="text-align:center;" action="" method="post">
-			<p><label style="font-size: 1.2em; margin-bottom: .7em;">Username</label><br><input style="border: none; border-bottom: 1px solid #ff5250; min-width: 100%; background: #ff525032; text-align: center;" type="text" name="username" value=""  /></p>
-			<p><label style="font-size: 1.2em; margin-bottom: .7em;">Password</label><br><input style="border: none; border-bottom: 1px solid #ff5250; min-width: 100%; background: #ff525032; text-align: center;" type="password" name="password" value=""  /></p>
-			<p><label></label><input style="margin-top: .75em; background-color: #ff5250; border: none; border-radius: 1em; color: #fff; padding: .75em 3em;" type="submit" name="submit" value="Login"  /></p>
+	<div class="form-body"> 
+		<h1>Login</h1>
+		<form action="" method="post">
+			<p><label>Username</label><br><input type="text" name="username" value=""  /></p>
+			<p><label>Password</label><br><input type="password" name="password" value=""  /></p>
+			<p><label></label><input type="submit" name="submit" value="Login"  /></p>
 		</form>
 	</div>
 
