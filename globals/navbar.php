@@ -15,12 +15,8 @@
                 </li>
                 <li class="nav-item br sub-nav-parent">
                     <div class="sub-nav-closed-row">
-                        <a class="nav-link br" href="../">ABOUT <b class="lg-dropper">&#9207;</b></a><button class="sub-nav-toggle">&#9207;</button>
+                        <a class="nav-link br" href="../">ABOUT</a>
                     </div>
-                    <ul class="sub-nav">
-                        <li class="sub-nav-item"><a href="../">Pricing</a></li>
-                        <li class="sub-nav-item"><a href="../">FAQ</a></li>
-                    </ul>
                 </li>
                 <li class="nav-item br">
                     <a class="nav-link br" href="../">CONTACT</a>
