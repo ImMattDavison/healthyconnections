@@ -32,9 +32,24 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 		$uid = time().$sdrn;
 
 		//very basic validation
-		if($username ==''){
-			$error[] = 'Please enter the username.';
+		if($firstName ==''){
+			$error[] = 'Please enter your firstname.';
 		}
+
+		if($lastName ==''){
+			$error[] = 'Please enter your lastname.';
+		}
+
+		if($username ==''){
+			$error[] = 'Please enter a username.';
+		}
+
+		// $usernameCheck = $db->prepare('SELECT username FROM site_users WHERE username = :username');
+		// $usernameCheck->execute(array(':username' => $username));
+		// $result = $usernameCheck->fetch();
+		// if($result['username'] == ''){
+		// 	$error[] = 'Username already exists.';
+		// }
 
 		if($password ==''){
 			$error[] = 'Please enter the password.';
@@ -52,9 +67,23 @@ if(!$user->is_logged_in()){ header('Location: index.php'); }
 			$error[] = 'Please enter your email address.';
 		}
 
+		// $emailCheck = $db->prepare('SELECT username FROM site_users WHERE email = :email');
+		// $emailCheck->execute(array(':email' => $email));
+		// $result = $emailCheck->fetch();
+		// if($result['email'] == ''){
+		// 	$error[] = 'Email already registered.';
+		// }
+
 		if($phoneNumber ==''){
 			$error[] = 'Please enter your phone number.';
 		}
+
+		// $phoneCheck = $db->prepare('SELECT username FROM site_users WHERE phoneNumber = :phoneNumber');
+		// $phoneCheck->execute(array(':phoneNumber' => $phoneNumber));
+		// $result = $phoneCheck->fetch();
+		// if($result['phoneNumber'] == ''){
+		// 	$error[] = 'Phone Number already registered.';
+		// }
 
 		if(!isset($error)){
 
