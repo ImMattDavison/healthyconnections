@@ -11,7 +11,7 @@ h2{
 }
 .tool-block{
     display: flex;
-    width: 33.33%;
+    width: 50%;
     padding: .5em;
     margin-block: 1em;
 }
@@ -55,7 +55,7 @@ h2{
 .tool-button{
     color: #fff;
     background-color: #ff5250;
-    padding: .5em 1em;
+    padding: .75em 1em;
     border-radius: .5em;
     text-align: center;
     width: 100%;
