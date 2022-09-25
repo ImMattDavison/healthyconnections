@@ -48,7 +48,7 @@ $userdata = mysqli_fetch_assoc($getuser);
             <div>
                 <p><?php echo $gatheredContent['trialDesc']; ?></p>
             </div>
-            <div>
+            <div class="apply-btn">
                 <a href="trialapplication.php?id=<?php echo $gatheredContent['id'];?>" class="submit">Apply for this Trial</a>
             </div>
             <div>
