@@ -95,7 +95,7 @@
                         ?>
                     </div>
                     <div style="text-align: center; margin-block: 1.5em;">
-                        <a class="view-all" href="trials.php">View All Trials</a>
+                        <a class="view-all" href="trials.php">View All Jobs</a>
                     </div>
                 </div>
             </div>
