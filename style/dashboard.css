@@ -86,3 +86,10 @@ h2{
         margin-top: .5em;
     }
 }
+.view-all{
+    padding: .5em 1em;
+    background-color: #ff5250;
+    color: #fff;
+    border-radius: .5em;
+    text-align: center;
+}
