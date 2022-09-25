@@ -1,0 +1,11 @@
+h1{
+    margin-block: 2em;
+    text-align: center;
+}
+.row{
+    margin-block: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
