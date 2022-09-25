@@ -44,9 +44,6 @@
                             <div class="tool-block">
                                 <a class="tool-button" href="create-job.php">Create a job ad for a Doctor</a>
                             </div>
-                            <div class="tool-block">
-                                <a class="tool-button" href="prescription.php">Alert a prescription as ready</a>
-                            </div>
                         </div>
                     </div>
                 <div>
