@@ -1,5 +1,6 @@
 <?php require('includes/config.php'); 
 // if not logged in redirect to login page
+error_reporting(0);
 session_start();
 
 if(!isset($_SESSION['username'])){
@@ -13,6 +14,23 @@ $gatheredContent = mysqli_fetch_assoc($gather);
 
 $getuser = mysqli_query($conn, "SELECT * FROM site_users WHERE username='".$_SESSION['username']."'");
 $userdata = mysqli_fetch_assoc($getuser);
+
+if(isset($_POST['submit'])) {
+ 
+    $sid = "ACdf566129482996b6ab9881ab0be5acd4"; // Your Account SID from www.twilio.com/console
+    $token = "YYYYYY"; // Your Auth Token from www.twilio.com/console
+    
+    $client = new Twilio\Rest\Client($sid, $token);
+    $message = $client->messages->create(
+      '', // Text this number
+      [
+        'from' => '', // From a valid Twilio number
+        'body' => ''
+      ]
+    );
+    
+    print $message->sid;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,8 +46,7 @@ $userdata = mysqli_fetch_assoc($getuser);
             <h1>Medical Trial</h1>
             <div class="row poster-block">
                 <div>
-                    <p>Medical Trial Listing by: <b><?php echo $gatheredContent['username']; ?></b></p>
-                    <small>Member of Healthy Connections since <?php echo date('d/m/y', strtotime($userdata['joinDate'])); ?></small> 
+                    <p>Medical Trial Listing by: <b><?php echo $gatheredContent['username']; ?></b></p> 
                 </div>
                 <div>
                     Posted on <?php echo date('d/m/y H:i', strtotime($gatheredContent['trialPostDate'])); ?>
