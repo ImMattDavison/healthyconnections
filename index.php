@@ -72,6 +72,9 @@
                             }
                         ?>
                     </div>
+                    <div style="text-align: center; margin-block: 1.5em;">
+                        <a class="view-all" href="trials.php">View All Trials</a>
+                    </div>
                 </div>
                 <div>
                     <h3 class="section-heading">Job Ads</h3>
@@ -90,6 +93,9 @@
                                     </div>";
                             }
                         ?>
+                    </div>
+                    <div style="text-align: center; margin-block: 1.5em;">
+                        <a class="view-all" href="trials.php">View All Trials</a>
                     </div>
                 </div>
             </div>
