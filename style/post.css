@@ -9,3 +9,8 @@ h1{
     align-items: center;
     justify-content: space-between;
 }
+.poster-block{
+    padding: 1em 1.5em;
+    background-color: lightgrey; 
+    border-radius: .5em;   
+}
