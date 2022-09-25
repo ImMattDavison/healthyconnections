@@ -8,9 +8,16 @@ if(!isset($_SESSION['username'])){
     exit();
 }
 $postid = $_GET['id'];
+
 $pgContent = 'SELECT * FROM posts WHERE id = '.$postid.'';
 $gather = mysqli_query($conn, $pgContent);
 $gatheredContent = mysqli_fetch_assoc($gather);
+
+if($gatheredContent['id'] == ''){
+	header('Location: index.php');
+	exit;
+}
+
 
 $getuser = mysqli_query($conn, "SELECT * FROM site_users WHERE username='".$_SESSION['username']."'");
 $userdata = mysqli_fetch_assoc($getuser);
@@ -24,32 +31,6 @@ $email = $userdata['email'];
 $phone = $userdata['phoneNumber'];
 $text = $gatheredContent['phoneNumber'];
 $textTitle = $gatheredContent['username'];
-
-// $curl = curl_init();
-// curl_setopt_array($curl, [
-//     CURLOPT_URL => $url,
-//     CURLOPT_HEADER => false,
-//     CURLOPT_RETURNTRANSFER => true,
-//     CURLOPT_POST => [
-//         'trialname' => $trialname,
-//         'firstname' => $firstname,
-//         'lastname' => $lastname,
-//         'email' => $email,
-//         'phone' => $phone,
-//         'text' => $text
-//     ],
-// ]);
-
-// $response = curl_exec($curl);
-
-// if ($error = curl_error($curl)) {
-//   throw new Exception($error);
-// }
-
-// curl_close($curl);
-// $response = json_encode($response, true);
-
-// var_dump('Response:', $response);
 
 $_ZAP_ARRAY = array(
         'type' => 0,
