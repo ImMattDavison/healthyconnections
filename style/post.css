@@ -20,6 +20,7 @@ h2{
 }
 .poster-block p{
     font-size: 1.1em;
+    margin-block: 0;
 }
 p{
     font-size: 1.2em;
