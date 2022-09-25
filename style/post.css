@@ -35,6 +35,9 @@ p{
     border-radius: .5em;
     cursor: pointer;
 }
+.apply-btn{
+    margin-block: 2em;
+}
 .form-info{
     font-size: .85em;
 }
