@@ -2,6 +2,9 @@ h1{
     margin-block: 2em;
     text-align: center;
 }
+h2{
+    margin-block: 1em;
+}
 .row{
     margin-block: 2em;
     display: flex;
