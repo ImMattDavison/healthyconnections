@@ -42,7 +42,7 @@ $userdata = mysqli_fetch_assoc($getuser);
             <div>
                 <p><?php echo $gatheredContent['trialDesc']; ?></p>
             </div>
-            <a href="trialapplication.php?id=<?php echo $gatheredContent['id'];?>" class="button">Apply for this Trial</a>
+            <a href="trialapplication.php?id=<?php echo $gatheredContent['id'];?>" class="submit">Apply for this Trial</a>
             <p class="form-info">By clicking the above button you accept for Healthy Connections to text the poster of this trial with your full name, email address and phone number.</p>
         </div>
     </body>
