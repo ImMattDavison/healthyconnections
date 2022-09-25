@@ -199,6 +199,9 @@ div.sticky {
   background: #3E3E3E;
   color: #fff;
 }
+.sub-nav li{
+  color: #000;
+}
 .accounts-buttons{
   display: flex;
   justify-content: center;
