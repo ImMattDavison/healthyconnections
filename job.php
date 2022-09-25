@@ -49,7 +49,7 @@ $userdata = mysqli_fetch_assoc($getuser);
                 <p><?php echo $gatheredContent['trialDesc']; ?></p>
             </div>
             <div class="apply-btn">
-                <a href="jobapplication.php?id=<?php echo $gatheredContent['id'];?>" class="submit">Apply for this Trial</a>
+                <a href="jobapplication.php?id=<?php echo $gatheredContent['id'];?>" class="submit">Apply for this Job</a>
             </div>
             <div>
                 <p class="form-info">By clicking the above button you accept for Healthy Connections to text the poster of this job opening with your full name, email address and phone number. You will receive a text as confirmation shortly.</p>
