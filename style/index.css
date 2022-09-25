@@ -1,0 +1,19 @@
+body{
+    background: linear-gradient(0deg, rgba(247,170,170,.7) 0%, rgba(255,82,80,.5) 35%), url('../images/loginbackground.webp') no-repeat;
+    min-height: 800px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    background-size: cover;
+}
+.content-flex{
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+h1 h2{
+    color: #fff;
+}
