@@ -15,7 +15,10 @@
         </head>
         <body>
             <?php include('globals/navbar.php') ?>
-            
+            <div class="flex">
+                <h1>Healthy Connections</h1>
+                <h2>Connect with Doctors, Find Medical Trials and More.</h2>
+            </div>
         </body>
     <?php } else if(isset($_SESSION['username'])) {
                     $getuser = mysqli_query($conn, "SELECT * FROM site_users WHERE username='".$_SESSION['username']."'");
