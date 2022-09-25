@@ -16,10 +16,10 @@
         <body>
             <?php include('globals/navbar.php') ?>
             <div class="container">
-            <div class="flex">
-                <h1>Healthy Connections</h1>
-                <h2>Connect with Doctors, Find Medical Trials and More.</h2>
-            </div>
+                <div class="flex">
+                    <h1>Healthy Connections</h1>
+                    <h2>Connect with Doctors, Find Medical Trials and More.</h2>
+                </div>
             </div>
         </body>
     <?php } else if(isset($_SESSION['username'])) {
