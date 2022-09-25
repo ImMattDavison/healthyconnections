@@ -17,17 +17,22 @@ $userdata = mysqli_fetch_assoc($getuser);
 <!DOCTYPE html>
 <html>
     <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Healthy Connections | Connect with Doctors, Find Medical Trials and More.</title>
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/post.css">
     </head>
     <body>
         <div class="container">
-            <div class="row">
+            <h1>Medical Trial</h1>
+            <div class="row poster-block">
                 <div>
-                    <p>Medical Trial Listing by: <?php echo $gatheredContent['username']; ?></p>
-                    <small>Member of Healthy Connections since <?php echo $userdata['joinDate']; ?></small> 
+                    <p>Medical Trial Listing by: <b><?php echo $gatheredContent['username']; ?></b></p>
+                    <small>Member of Healthy Connections since <?php echo date('d/m/y', strtotime($userdata['joinDate'])); ?></small> 
                 </div>
                 <div>
-                    Posted on <?php echo date('d/m/y H:i', strtotime($gatheredContent['trialPostDate'])) ?>
+                    Posted on <?php echo date('d/m/y H:i', strtotime($gatheredContent['trialPostDate'])); ?>
                 </div>
             </div>
         </div>
