@@ -12,6 +12,11 @@ $pgContent = 'SELECT * FROM posts WHERE id = '.$postid.'';
 $gather = mysqli_query($conn, $pgContent);
 $gatheredContent = mysqli_fetch_assoc($gather);
 
+if($gatheredContent['id'] == ''){
+	header('Location: index.php');
+	exit;
+}
+
 $getuser = mysqli_query($conn, "SELECT * FROM site_users WHERE username='".$_SESSION['username']."'");
 $userdata = mysqli_fetch_assoc($getuser);
 
