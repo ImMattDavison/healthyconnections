@@ -25,3 +25,15 @@ p{
     font-size: 1.2em;
     margin-block: 1em;
 }
+input{
+    background-color: #ff5250;
+    color: #fff;
+    border: none;
+    padding: .75em 1.5em;
+    font-size: 1.3em;
+    border-radius: .5em;
+    cursor: pointer;
+}
+.form-info{
+    font-size: .85em;
+}
