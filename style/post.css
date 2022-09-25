@@ -4,6 +4,7 @@ h1{
 }
 h2{
     margin-block: 1em;
+    font-size: 1.5em;
 }
 .row{
     margin-block: 2em;
@@ -16,4 +17,10 @@ h2{
     padding: 1em 1.5em;
     background-color: lightgrey; 
     border-radius: .5em;   
+}
+.poster-block p{
+    font-size: 1.1em;
+}
+p{
+    font-size: 1.2em;
 }
