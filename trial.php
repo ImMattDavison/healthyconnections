@@ -15,22 +15,6 @@ $gatheredContent = mysqli_fetch_assoc($gather);
 $getuser = mysqli_query($conn, "SELECT * FROM site_users WHERE username='".$_SESSION['username']."'");
 $userdata = mysqli_fetch_assoc($getuser);
 
-if(isset($_POST['submit'])) {
- 
-    $sid = "ACdf566129482996b6ab9881ab0be5acd4"; // Your Account SID from www.twilio.com/console
-    $token = "YYYYYY"; // Your Auth Token from www.twilio.com/console
-    
-    $client = new Twilio\Rest\Client($sid, $token);
-    $message = $client->messages->create(
-      '', // Text this number
-      [
-        'from' => '', // From a valid Twilio number
-        'body' => ''
-      ]
-    );
-    
-    print $message->sid;
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,9 +42,7 @@ if(isset($_POST['submit'])) {
             <div>
                 <p><?php echo $gatheredContent['trialDesc']; ?></p>
             </div>
-            <form action='' method='post'>
-                <input type='submit' name='apply' value='Apply for Trial' class='post-button'>
-            </form>
+            <a href="trialapplication.php?id=<?php echo $gatheredContent['id'];?>" class="button">Apply for this Trial</a>
             <p class="form-info">By clicking the above button you accept for Healthy Connections to text the poster of this trial with your full name, email address and phone number.</p>
         </div>
     </body>
