@@ -35,6 +35,12 @@ $userdata = mysqli_fetch_assoc($getuser);
                     Posted on <?php echo date('d/m/y H:i', strtotime($gatheredContent['trialPostDate'])); ?>
                 </div>
             </div>
+            <div>
+                <h2><?php echo $gatheredContent['trialName']; ?></h2>
+            </div>
+            <div>
+                <p><?php echo $gatheredContent['trialDesc']; ?></p>
+            </div>
         </div>
     </body>
 </html>
