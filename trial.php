@@ -21,7 +21,7 @@ $userdata = mysqli_fetch_assoc($getuser);
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
-        <title>Healthy Connections | Connect with Doctors, Find Medical Trials and More.</title>
+        <title>Medical Trial | Healthy Connections</title>
         <link rel="stylesheet" href="style/main.css">
         <link rel="stylesheet" href="style/post.css">
     </head>
