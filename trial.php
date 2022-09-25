@@ -31,6 +31,7 @@ $userdata = mysqli_fetch_assoc($getuser);
         <link rel="stylesheet" href="style/post.css">
     </head>
     <body>
+        <?php include('globals/navbar.php') ?>
         <div class="container">
             <h1>Medical Trial</h1>
             <div class="row poster-block">
