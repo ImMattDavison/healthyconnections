@@ -44,7 +44,7 @@ $userdata = mysqli_fetch_assoc($getuser);
             <form action='' method='post'>
                 <input type='submit' name='apply' value='Apply for Trial' class='post-button'>
             </form>
-            <p class="form info">By clicking the above button you accept for Healthy Connections to text the poster of this trial with your full name, email address and phone number.</p>
+            <p class="form-info">By clicking the above button you accept for Healthy Connections to text the poster of this trial with your full name, email address and phone number.</p>
         </div>
     </body>
 </html>
